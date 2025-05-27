@@ -39,18 +39,46 @@ CloudChain is a next-generation hybrid cloud storage platform inspired by Google
 ## 📂 Project Structure
 
 ```
-cloudchain/
-├── app/
-│   ├── api/               # API routes
-│   ├── dashboard/         # Main dashboard
-│   ├── upload/            # Upload logic & forms
-│   └── layout.tsx         # Root layout with theme
-├── components/            # Reusable UI components
-├── lib/                   # Helper functions & utils
-├── styles/                # Global styles & theme configs
-├── public/                # Static files
-├── types/                 # TypeScript interfaces & types
-└── README.md              # Project info
+cloud-chain/
+├── app/                       # App Router directory for routes
+│   ├── (auth)/                # Authentication routes (login, register)
+│   ├── dashboard/             # Main dashboard for logged-in users
+│   │   ├── upload/            # Upload file interface
+│   │   └── settings/          # User settings and profile management
+│   └── page.tsx              # Root landing page
+│
+├── components/                # Reusable UI components
+│   ├── ui/                    # Shadcn-based UI components
+│   ├── navbar.tsx            # Navigation bar
+│   ├── file-card.tsx         # File display card
+│   └── sidebar.tsx           # Sidebar for navigation
+│
+├── lib/                       # Utility libraries
+│   ├── supabase.ts           # Supabase client and config
+│   ├── clerk.ts              # Clerk auth helpers
+│   ├── ipfs.ts               # IPFS integration functions
+│   └── utils.ts              # Generic helper functions
+│
+├── actions/                   # Server actions (Next.js server functions)
+│   ├── file-actions.ts       # Upload, delete, and file management actions
+│   └── user-actions.ts       # User profile and settings actions
+│
+├── hooks/                     # Custom React hooks
+│   └── useUpload.ts          # Hook to handle file uploads
+│
+├── public/                    # Static assets
+│   └── logo.png              # Logo and other public images
+│
+├── styles/                    # Global and component styles
+│   └── globals.css           # Tailwind base styling
+│
+├── .env.local                 # Local environment variables
+├── tailwind.config.ts        # Tailwind CSS configuration
+├── tsconfig.json             # TypeScript configuration
+├── next.config.js            # Next.js configuration
+├── package.json              # Project metadata and dependencies
+└── README.md                 # Project documentation
+
 ```
 
 ---
@@ -117,3 +145,5 @@ pnpm dev
 ## 📜 License
 
 MIT © Vasanthakumar C | CloudChain 2025
+
+Made with ❤️ by @Cpvasanth
