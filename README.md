@@ -58,7 +58,7 @@ cloudchain/
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/<your-username>/cloudchain.git
+git clone https://github.com/cpvasanth/cloud-chain.git
 cd cloudchain
 pnpm install
 pnpm dev
